@@ -30,7 +30,7 @@ class _TapToScaleContainerState extends State<TapToChangeColor> {
                 isTapped = !isTapped;
               });
             },
-            child: Text('Tap to scale'),
+            child: Text('Tap to change color'),
           ),
         ],
       ),
