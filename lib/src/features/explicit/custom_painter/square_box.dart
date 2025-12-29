@@ -21,7 +21,7 @@ class SquareBoxPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.blue
+      ..color = Colors.pink
       ..strokeWidth = 20
       ..strokeCap = StrokeCap.square;
     canvas.drawLine(Offset(20, 20), Offset(100, 20), paint);
