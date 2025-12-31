@@ -1,3 +1,4 @@
+import 'package:animations_masterclass/src/features/explicit/clipper/two_half_circle_clipper.dart';
 import 'package:animations_masterclass/src/features/explicit/custom_painter/bouncing_ball_animation.dart';
 import 'package:animations_masterclass/src/features/explicit/custom_painter/bouncing_ball_optimized.dart';
 import 'package:animations_masterclass/src/features/explicit/custom_painter/square_box.dart';
@@ -173,6 +174,20 @@ class MainApp extends StatelessWidget {
                     },
                     icon: Icon(Icons.animation),
                     label: Text('Sweep Gradient Example'),
+                  ),
+                ),
+
+                Builder(
+                  builder: (context) => ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TwoHalfCircleClipperWidget(),
+                        ),
+                      );
+                    },
+                    label: Text('TwoHalfCircle clipper demo'),
                   ),
                 ),
               ],
