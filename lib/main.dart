@@ -13,6 +13,7 @@ import 'package:animations_masterclass/src/features/implicit/inbuilt/tap_to_resi
 import 'package:animations_masterclass/src/features/implicit/inbuilt/tap_to_scale_container.dart';
 import 'package:animations_masterclass/src/features/implicit/tweenanimationbuilder/tap_to_resize_container.dart';
 import 'package:animations_masterclass/src/features/implicit/tweenanimationbuilder/tween_animation_showcase.dart';
+import 'package:animations_masterclass/src/features/shader/mesh_gradient.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -224,6 +225,19 @@ class MainApp extends StatelessWidget {
                       );
                     },
                     label: Text('Analog clock'),
+                  ),
+                ),
+                Builder(
+                  builder: (context) => ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ShaderExample(),
+                        ),
+                      );
+                    },
+                    label: Text('Shader Example'),
                   ),
                 ),
               ],
