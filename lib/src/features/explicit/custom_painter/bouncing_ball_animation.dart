@@ -19,7 +19,10 @@ class _BouncingBallAnimationState extends State<BouncingBallAnimation>
       duration: const Duration(milliseconds: 500),
     );
 
-    _animation = Tween<double>(begin: 200, end: 300).animate(_controller);
+    _animation = Tween<double>(
+      begin: 100,
+      end: 300,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeIn));
 
     _controller.repeat(reverse: true);
   }

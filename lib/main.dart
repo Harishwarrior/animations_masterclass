@@ -1,10 +1,12 @@
 import 'package:animations_masterclass/src/features/explicit/clipper/two_half_circle_clipper.dart';
+import 'package:animations_masterclass/src/features/explicit/custom_painter/analog_clock.dart';
 import 'package:animations_masterclass/src/features/explicit/custom_painter/bouncing_ball_animation.dart';
 import 'package:animations_masterclass/src/features/explicit/custom_painter/bouncing_ball_optimized.dart';
 import 'package:animations_masterclass/src/features/explicit/custom_painter/square_box.dart';
 import 'package:animations_masterclass/src/features/explicit/custom_painter/sweep_gradient.dart';
 import 'package:animations_masterclass/src/features/explicit/custom_painter/two_half_circle.dart';
 import 'package:animations_masterclass/src/features/explicit/logo_fade_animation.dart';
+import 'package:animations_masterclass/src/features/explicit/rotation/three_dimensional_rotation_animation.dart';
 import 'package:animations_masterclass/src/features/explicit/staggered_animations/staggered_slide_animation.dart';
 import 'package:animations_masterclass/src/features/implicit/inbuilt/tap_to_change_color.dart';
 import 'package:animations_masterclass/src/features/implicit/inbuilt/tap_to_resize_container.dart';
@@ -188,6 +190,40 @@ class MainApp extends StatelessWidget {
                       );
                     },
                     label: Text('TwoHalfCircle clipper demo'),
+                  ),
+                ),
+                Builder(
+                  builder: (context) => ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  ThreeDimensionalAnimationWidget(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                                return FadeTransition(
+                                  opacity: animation,
+                                  child: child,
+                                );
+                              },
+                        ),
+                      );
+                    },
+                    label: Text('Three Dimensional Animation widget'),
+                  ),
+                ),
+
+                Builder(
+                  builder: (context) => ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AnalogClock()),
+                      );
+                    },
+                    label: Text('Analog clock'),
                   ),
                 ),
               ],

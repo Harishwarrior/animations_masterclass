@@ -24,7 +24,7 @@ class _StaggeredSlideAnimationState extends State<StaggeredSlideAnimation>
 
     _animation = List.generate(
       count,
-      (index) => Tween<Offset>(begin: Offset.zero, end: Offset(0.5, 0)).animate(
+      (index) => Tween<Offset>(begin: Offset.zero, end: Offset(0.8, 0)).animate(
         CurvedAnimation(
           parent: _controller,
           // Initially we will have 0 * (1 / 10) = 0
