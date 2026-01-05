@@ -29,9 +29,11 @@ class _ShaderExampleState extends State<ShaderExample>
 
   Future<void> _loadShader() async {
     // Load the compiled shader from assets
-    final program = await FragmentProgram.fromAsset(
-      'assets/shaders/mesh_gradient.frag',
-    );
+    // final program = await FragmentProgram.fromAsset(
+    //   'assets/shaders/mesh_gradient.frag',
+    // );
+
+    final program = await FragmentProgram.fromAsset('assets/shaders/holographic.frag');
     setState(() => _program = program);
   }
 

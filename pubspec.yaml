@@ -21,3 +21,4 @@ flutter:
 
   shaders:
     - assets/shaders/mesh_gradient.frag
+    - assets/shaders/holographic.frag

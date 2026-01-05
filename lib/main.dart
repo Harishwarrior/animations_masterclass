@@ -2,8 +2,10 @@ import 'package:animations_masterclass/src/features/explicit/clipper/two_half_ci
 import 'package:animations_masterclass/src/features/explicit/custom_painter/analog_clock.dart';
 import 'package:animations_masterclass/src/features/explicit/custom_painter/bouncing_ball_animation.dart';
 import 'package:animations_masterclass/src/features/explicit/custom_painter/bouncing_ball_optimized.dart';
+import 'package:animations_masterclass/src/features/explicit/custom_painter/camera_example.dart';
 import 'package:animations_masterclass/src/features/explicit/custom_painter/square_box.dart';
 import 'package:animations_masterclass/src/features/explicit/custom_painter/sweep_gradient.dart';
+import 'package:animations_masterclass/src/features/explicit/custom_painter/triangle_shape.dart';
 import 'package:animations_masterclass/src/features/explicit/custom_painter/two_half_circle.dart';
 import 'package:animations_masterclass/src/features/explicit/logo_fade_animation.dart';
 import 'package:animations_masterclass/src/features/explicit/rotation/three_dimensional_rotation_animation.dart';
@@ -238,6 +240,32 @@ class MainApp extends StatelessWidget {
                       );
                     },
                     label: Text('Shader Example'),
+                  ),
+                ),
+
+                Builder(
+                  builder: (context) => ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TriangleShape(),
+                        ),
+                      );
+                    },
+                    label: Text('Triangle shape painter'),
+                  ),
+                ),
+
+                Builder(
+                  builder: (context) => ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => CameraPage()),
+                      );
+                    },
+                    label: Text('Camera painter'),
                   ),
                 ),
               ],
